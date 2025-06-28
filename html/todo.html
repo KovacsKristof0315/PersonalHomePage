@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo - Kovács Kristóf</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/todo.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <main class="flex-fill container py-4">
+        <div class="card w-100 mt-1 justify-content-center">
+            <h1 class="text-center text-light">Új elem hozzáadása</h1>
+        </div>
+
+        <div class="justify-content-center text-center g-4 mt-3 card w-100 mx-0">
+            <div class="item m-3 p-2">
+                <div class="container my-4">
+                    <div class="row g-4">
+                        <!-- Task Name -->
+                        <div class="col-12 col-md-6 mt-2">
+                            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2">
+                                <label for="taskName" class="form-label text-white mb-0 w-sm-50">Elnevezés:</label>
+                                <input type="text" id="taskName" class="form-control custom-input"
+                                    placeholder="Pl. Matek házi">
+                            </div>
+                        </div>
+
+                        <!-- Task Deadline -->
+                        <div class="col-12 col-md-6 mt-2">
+                            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2">
+                                <label for="taskDate" class="form-label text-white mb-0 w-sm-50">Határidő:</label>
+                                <input type="date" id="taskDate" class="form-control custom-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button id="add" class="btn-blue w-100">Hozzáad</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card w-100 mt-3 justify-content-center">
+            <h1 class="text-center text-light">To-Do lista</h1>
+        </div>
+
+        <!--Lista-->
+        <div class="justify-content-center text-center g-4 mt-3 pt-2 card w-100 mx-auto" id="todo_list">
+
+        </div>
+
+
+        <div class="card w-100 mt-3 justify-content-center">
+            <h1 class="text-center text-light">Elvégzett feladatok</h1>
+        </div>
+
+        <div class="justify-content-center text-center g-4 mt-3 pt-2 card w-100 mx-auto" id="archive_list">
+            
+        </div>
+        
+        <dialog class="DialogModal col-12 col-md-8">
+            <div class="card w-100 mt-3 justify-content-center">
+                <h1 class="text-center text-light">Adatok szerkesztése</h1>
+            </div>
+
+            <div class="item m-3 mt-1 p-2 row align-items-center rounded shadow-sm mx-auto">
+                <div class="row g-4">
+                        <!-- Task Name -->
+                        <div class="col-12 col-md-6 mt-2">
+                            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2">
+                                <label for="taskName" class="form-label text-white mb-0 w-sm-50">Elnevezés:</label>
+                                <input type="text" id="editName" class="form-control custom-input"
+                                    placeholder="Pl. Matek házi">
+                            </div>
+                        </div>
+
+                        <!-- Task Deadline -->
+                        <div class="col-12 col-md-6 mt-2">
+                            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2">
+                                <label for="taskDate" class="form-label text-white mb-0 w-sm-50">Határidő:</label>
+                                <input type="date" id="editDate" class="form-control custom-input">
+                            </div>
+                        </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex gap-2 justify-content-end flex-column flex-sm-row mt-1">
+                    <button class="btn btn-blue flex-grow-1" id="editBack">Mégse ❌</button>
+                    <button class="btn btn-blue flex-grow-1" id="editDone">Kész ✅</button>
+                </div>
+            </div>
+        </table>
+        </dialog>
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/todo.js"></script>
+</body>
+
+</html>

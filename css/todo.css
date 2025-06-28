@@ -1,0 +1,72 @@
+.item
+{
+    width: 100%;
+    margin: 0 auto;
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.custom-input {
+  background-color: #e9f2ff;
+  border: 2px solid #007bff;
+  border-radius: 0.5rem;
+  color: #003366;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-blue {
+  background: linear-gradient(to right, #006de2, #0056b3);
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.btn-blue:hover {
+  background: linear-gradient(to right, #0056b3, #003f7f);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.3);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.r1
+{
+  accent-color: red;
+}
+
+.r2
+{
+  accent-color: darkorange;
+}
+
+.r3
+{
+  accent-color: yellow;
+}
+
+.r4
+{
+  accent-color: green;
+  margin-right: 0 !important;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
+  margin-right: 0.5rem;
+}
+
+
+.DialogModal
+{
+  background: linear-gradient(135deg, #e0f0ff 0%, #cfe2ff 100%);
+  border-radius: 10px;
+
+}
