@@ -26,6 +26,10 @@ async function addItem(name, date, progress, id) {
     todo_Item.querySelector("#taskDone").addEventListener("click", () => archiving(id)); 
     todo_Item.querySelector('#taskEdit').addEventListener("click", () => editItem(id, todo_Item));
 
+    todo_Item.querySelector("#taskDone").innerHTML = text[localStorage.getItem("actLang")].todo.buttons[2];
+    todo_Item.querySelector("#taskEdit").innerHTML = text[localStorage.getItem("actLang")].todo.buttons[3];
+    todo_Item.querySelectorAll(".deadLine")[0].innerHTML = text[localStorage.getItem("actLang")].todo.inputData[0];
+    todo_Item.querySelectorAll(".progressTitle")[0].innerHTML = text[localStorage.getItem("actLang")].todo.inputData[2];
     const progressX = todo_Item.querySelectorAll('[name="progressX"]');
 
     progressX.forEach((radio,i) => {
@@ -44,7 +48,7 @@ async function addArchiveItem(name, date, id = getSetId()) {
     archive_Item.querySelector("#taskDateItem").innerText = date;
     
     archive_Item.querySelector("#taskDelete").addEventListener("click", () => deleteArchive(id)); 
-
+    archive_Item.querySelectorAll(".btnTaskDeleteForAll")[0].innerHTML = text[localStorage.getItem("actLang")].todo.buttons[4];
     $("archive_list").appendChild(archive_Item);
 }
 
@@ -133,23 +137,23 @@ function getSetId() {
 }
 
 async function loadTodoItem() {
-  const res = await fetch('/components/todo_Item.html');
-  const html = await res.text();
+    const res = await fetch('/components/todo_Item.html');
+    const html = await res.text();
 
-  const todo_Item = document.createElement('div');
-  todo_Item.innerHTML = html;
+    const todo_Item = document.createElement('div');
+    todo_Item.innerHTML = html;
 
-  return todo_Item.firstChild;
+    return todo_Item.firstChild;
 }
 
 async function loadArchiveItem() {
-  const res = await fetch('/components/archive_Item.html');
-  const html = await res.text();
+    const res = await fetch('/components/archive_Item.html');
+    const html = await res.text();
 
-  const archive_Item = document.createElement('div');
-  archive_Item.innerHTML = html;
+    const archive_Item = document.createElement('div');
+    archive_Item.innerHTML = html;
 
-  return archive_Item.firstChild;
+    return archive_Item.firstChild;
 }
 
 function saveData(name, date, progress, id)

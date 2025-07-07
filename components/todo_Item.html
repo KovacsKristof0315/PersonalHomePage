@@ -2,10 +2,10 @@
     <div class="col-12 col-md-8 row mx-auto mb-1">
         <div class="col-12 col-sm-6 mb-2 mb-sm-0 mx-auto">
             <h5 class="fw-bold mb-1" id="taskNameItem">Matek házi</h5>
-            <p class="mb-0">Határidő: <strong id="taskDateItem">2025-06-07</strong></p>
+            <p class="mb-0" id=""><span class="deadLine">Határidő:</span><strong id="taskDateItem">2025-06-07</strong></p>
         </div>
         <div class="col-12 col-sm-6 row my-auto mx-auto">
-            <h5 class="mb-1 d-block">Előrehaladás:</h5>
+            <h5 class="mb-1 d-block progressTitle"></h5>
             <div class="d-flex gap-2 mx-auto">
                 <div class="w-100" id="#progressDiv">
                     <input type="radio" name="progressX" class="r1">
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="col-12 col-md-4 d-flex gap-2 justify-content-end flex-column flex-sm-row">
-        <button class="btn btn-blue flex-grow-1" id="taskEdit">Szerkesztés ✏️</button>
-        <button class="btn btn-blue flex-grow-1" id="taskDone">Kész ✅</button>
+        <button class="btn btn-blue flex-grow-1 btnEdit" id="taskEdit"></button>
+        <button class="btn btn-blue flex-grow-1 btnDone" id="taskDone"></button>
     </div>
 </div>

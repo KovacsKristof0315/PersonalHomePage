@@ -29,9 +29,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   color: #ffffff;
+  position: sticky;
 }
-
-
 
 
 
@@ -64,3 +63,34 @@ body {
 }
 
 
+.infoButton
+{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-image: linear-gradient(to right, #004080, #007bff);
+  color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.infoButton div
+{
+  background: linear-gradient(135deg, #e0f0ff 0%, #cfe2ff 100%);
+  border-radius: 100%;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #004080;
+}
