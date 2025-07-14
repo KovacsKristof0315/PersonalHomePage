@@ -1,0 +1,24 @@
+.btn-blue {
+  background: linear-gradient(to right, #006de2, #0056b3);
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.btn-blue:hover {
+  background: linear-gradient(to right, #0056b3, #003f7f);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.3);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.weatherCard
+{
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #3697ff, #002347);
+  border-radius: 10px;
+}

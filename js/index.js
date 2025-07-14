@@ -6,7 +6,6 @@ const body = document.body;
 const page = (window.location.pathname.split("/").filter(Boolean).pop()).split('.')[0];
 
 addEventListener('load', () => {
-
   if (localStorage.getItem('actLang') === null) {
   localStorage.setItem('actLang', 'hu');}
 
@@ -180,5 +179,43 @@ function setLang(lang) {
     document.querySelectorAll(".progressTitle").forEach(el => el.innerHTML = text[lang].todo.inputData[2]);
     document.querySelectorAll(".deadLine").forEach(el => el.innerHTML = text[lang].todo.inputData[0]);
     document.querySelectorAll(".btnTaskDeleteForAll").forEach(el => el.innerHTML = text[lang].todo.buttons[4]);
+  }
+
+  if (page == "weather") {
+
+    document.querySelector("#title").textContent = text[lang].weather.title;
+    document.querySelectorAll(".cityName")[0].textContent = text[lang].weather.cityName;
+    document.querySelector("#search").innerHTML = text[lang].weather.search;
+    document.querySelector("#airQ").innerHTML = text[lang].weather.airQ;
+    
+    const date = document.querySelectorAll(".day");
+    const Wind = document.querySelectorAll(".wind");
+    const description = document.querySelectorAll(".description");
+    const nightDescription = document.querySelectorAll(".nightDescription");
+    for (let i = 0; i < date.length; i++) {
+      date[i].textContent = text[lang].weather.day[i];
+      Wind[i].textContent = text[lang].weather.wind;
+      // let textD = description[i].textContent;
+      // console.log(textD)
+      // let j = text.en.weather.description.indexOf(textD.trim());
+      // console.log(text[lang].weather.description[j] || text.en.weather.description[j])
+      // description[i].textContent = text[lang].weather.description[j] || text.en.weather.description[j];
+
+
+      const data = JSON.parse(localStorage.getItem("weather"));
+      const actData = data.forecast.forecastday[i].hour.find(x=>x.time == `${data.forecast.forecastday[i].date} 12:00`)
+      let j = text.en.weather.description.indexOf(actData.condition.text.trim());
+      
+      const descriptionText = text[lang].weather.description[j] || actData.condition.text;
+      description[i].textContent = descriptionText;
+
+
+      const actNightData = data.forecast.forecastday[i].hour.find(x=>x.time == `${data.forecast.forecastday[i].date} 21:00`)
+      j = text.en.weather.description.indexOf(actNightData.condition.text.trim());
+      
+      const nightDescriptionText = text[lang].weather.description[j] || actNightData.condition.text;
+      nightDescription[i].textContent = nightDescriptionText;
+    }
+
   }
 }

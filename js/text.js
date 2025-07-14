@@ -1,6 +1,6 @@
 const text = {
     hu : {
-        navbar : ["Kovács Kristóf", "Kő-Papír-Olló", "Todo alkalmazás"],
+        navbar : ["Kovács Kristóf", "Kő-Papír-Olló", "Todo alkalmazás", "Időjárás"],
         footer : ["&copy; 2025 Kovács Kristóf", "Neptun kód: CVA7DQ",
             `Készült tanulási céllal • <a href="mailto:kovacskristof3315@gmail.com" class="footer-link">Kapcsolat</a>`
         ],
@@ -17,6 +17,14 @@ const text = {
             {
                 title: "Todo alkalmazás",
                 content: "A todo alkalmazás úgy nevezett localStorage-ba menti az adatokat, ez az adott eszközön tárolódik így más nem láthatja az adott feladatot, és nem törlödik addig ammedig a szerver el nem dobja."
+            },
+            weather: {
+                title: "Időjárás alkalmazás",
+                content: `
+                    Az időjárás-alkalmazás az adatokat a WeatherAPI ingyenes API-ján keresztül szerzi be. 
+                    Mivel az ingyenes lekérések száma korlátozott, egy felhasználó számára 30 másodpercenként 1 lekérdezés engedélyezett. 
+                    Az adatok pontosságáért felelősséget nem vállalok!
+                `
             }
         },
         index :
@@ -48,10 +56,20 @@ const text = {
             titles: ["Új elem hozzáadása", "To-Do lista", "Elvégzett feladatok", "Adatok szerkesztése"],
             inputData:  ["Határidő:", "Elnevezés:", "Előrehaladás"],
             buttons: ["Hozzáad", "Mégse ❌", "Kész ✅", "Szerkesztés ✏️", "Végleges törlés 🗑️"]
-        }
+        },
+        weather :
+        {
+            title: "Időjárás",
+            cityName: "Település:",
+            search: "Keresés",
+            wind : "Szél (km/h)",
+            airQ: "Levegő minőség (μg/m³)",
+            description : ["Könnyű eső", "Helyenként felhős", "Felhős", "Napos", "Felhős", "Tiszta", "Elszort esőzés"],
+            day : ["Ma", "Holnap", "Holnapután"]
+        } 
     },
     en : {
-        navbar : ["Kristóf Kovács", "Rock-Paper-scissors", "Todo App"],
+        navbar : ["Kristóf Kovács", "Rock-Paper-scissors", "Todo App", "Weather App"],
         footer : ["&copy; 2025 Kristóf Kovács", "Neptun code: CVA7DQ",
             `Created for learning purposes • <a href="mailto:kovacskristof3315@gmail.com" class="footer-link">Contact</a>`
         ],
@@ -67,6 +85,14 @@ const text = {
             todo: {
                 title: "To-Do App",
                 content: "The to-do app saves tasks using localStorage, which stores the data on your device. This means no one else can see your tasks, and they remain saved until the browser clears them or storage is manually reset."
+            },
+            weather: {
+                title: "Weather Application",
+                content: `
+                    The weather application retrieves data using the free WeatherAPI service. 
+                    Since the number of free requests is limited, each user is allowed up to 1 queries per 30 seconds. 
+                    I do not take responsibility for the accuracy of the data!
+                `    
             }
         }, 
         index :
@@ -98,6 +124,16 @@ const text = {
             titles: ["Add New Item", "To-Do List", "Completed Tasks", "Edit Data"],
             inputData: ["Deadline:", "Title:", "Progress"],
             buttons: ["Add", "Cancel ❌", "Done ✅", "Edit ✏️", "Permanent Delete 🗑️"]
-        }
+        },
+        weather :
+        {
+            title: "Weather",
+            cityName: "City:",
+            search: "Search",
+            wind : "Wind (km/h)",
+            airQ: "Air quality (μg/m³)",
+            description : ["Light rain", "Partly Cloudy", "Overcast", "Sunny", "Cloudy", "Clear", "Patchy rain nearby"],
+            day : ["Today", "Tomorrow", "Day after tomorrow"]
+        } 
     }
 }
