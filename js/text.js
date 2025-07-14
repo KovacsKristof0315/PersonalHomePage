@@ -22,7 +22,7 @@ const text = {
                 title: "Időjárás alkalmazás",
                 content: `
                     Az időjárás-alkalmazás az adatokat a WeatherAPI ingyenes API-ján keresztül szerzi be. 
-                    Mivel az ingyenes lekérések száma korlátozott, egy felhasználó számára 30 másodpercenként 1 lekérdezés engedélyezett. 
+                    Mivel az ingyenes lekérések száma korlátozott, egy felhasználó számára napi 30 lekérdezés engedélyezett. 
                     Az adatok pontosságáért felelősséget nem vállalok!
                 `
             }
@@ -90,7 +90,7 @@ const text = {
                 title: "Weather Application",
                 content: `
                     The weather application retrieves data using the free WeatherAPI service. 
-                    Since the number of free requests is limited, each user is allowed up to 1 queries per 30 seconds. 
+                    Since the number of free requests is limited, each user is allowed up to 30 queries per day. 
                     I do not take responsibility for the accuracy of the data!
                 `    
             }
